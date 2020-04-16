@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block main %}
+<h1>Add Profile</h1>
+<form action="{{ url_for('profile') }}" method="POST" enctype="multipart/form-data">
+	{% include 'flash_messages.html' %}
+	<div class="form">
+		{{ form.csrf_token }} 
+		{{ form.firstname.label(class="label") }}
+		{{ form.firstname(size=35) }}
+		{{ form.lastname.label(class="label") }}
+		{{ form.lastname(size=35) }}
+		{{ form.gender.label(class="label") }}
+		{{ form.gender(class="sfield", placeholder="Select Gender") }}
+		{{ form.email.label(class="label") }}
+		{{ form.email(size=35) }}
+		{{ form.location.label(class="label") }}
+		{{ form.location(size=35) }}
+		{{ form.biography.label(class="label") }}
+		{{ form.biography(cols="35", rows="5", class="field") }}
+		{{ form.hidden_tag() }}
+		<p>Profile Picture</p>
+		{{ form.upload.label(class="browse") }}
+	  	{{ form.upload }}
+	  	<button type="submit">Add Profile</button>
+	</div>
+</form>
+{% endblock %}

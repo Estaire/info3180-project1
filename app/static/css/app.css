@@ -1,0 +1,126 @@
+*{
+    font-family: Arial;
+}
+
+body {
+    padding: 7rem 14rem;
+    background-color: rgb(235,243,250)
+}
+
+h1{
+    padding: 1rem 0rem 3rem 0rem;
+}
+
+.form{
+    display: grid;
+    background-color: white;
+    padding: 0rem 15rem 2rem 3rem;
+    border: 3px solid white;
+    border-radius: 5px;
+    border-top: 3px solid rgb(74,144,226);
+}
+
+.label{
+    font-weight: bold;
+    padding-top: 2rem
+}
+
+input[type="text"], textarea{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input[type=file] {
+    display:none;
+    margin:10px;
+}
+
+.browse{
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 10px 5px 10px 25px;
+    width: 7rem;
+}
+
+.form button{
+    background-color: rgb(126,211,33);
+    border: 1px solid rgb(126,211,33);
+    border-radius: 5px;
+    color: white;
+    margin-top: 2rem;
+    width: 6rem; 
+}
+
+.form p{
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.profile{
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    border-top: 4px solid rgb(74,144,226);
+    box-shadow: 0px 0px 10px lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "img name ."
+        "img gender button"
+        "img location .";
+    padding: 25px;
+    margin-bottom: 2rem;
+}
+
+.profile img{
+    grid-area: img;
+    width: 8rem;
+    height: 10rem
+}
+
+.name{
+    align-self: end;
+    font-weight: bold;
+    font-size: 24px;
+    grid-area: name;
+}
+
+.gender{
+    align-self: center;
+    color: rgb(189,189,189);
+    font-weight: bold;
+    font-size: 18px;
+    grid-area: gender;
+}
+
+.location{
+    color: rgb(189,189,189);
+    font-weight: bold;
+    font-size: 18px;
+    grid-area: location;
+}
+
+.profile a{
+    background-color: rgb(126,211,33);
+    border: 1px solid rgb(126,211,33);
+    border-radius: 5px;
+    color: white;
+    grid-area: button;
+    height: 2rem;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    text-decoration: none;
+    width: 9rem;
+    padding: 3px 0px;
+}
+
+
+
+
+
+
