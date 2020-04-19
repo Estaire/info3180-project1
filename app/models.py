@@ -12,7 +12,7 @@ class UserProfile(db.Model):
     location = db.Column(db.String(80))
     biography = db.Column(db.String(80))
     img_address = db.Column(db.String(120))
-    created_on = db.Column(db.DateTime, default=datetime.datetime.now())
+    created_on = db.Column(db.String(80))
 
     def __init__(self, first_name, last_name, gender, email, location, biography, img_address):
         self.first_name = first_name
@@ -22,7 +22,7 @@ class UserProfile(db.Model):
         self.location = location
         self.biography = biography
         self.img_address = img_address
-        self.created_on = datetime.datetime.now()
+        self.created_on = datetime.datetime.now().strftime("%B %d, %Y")
 
     def get_id(self):
         try:

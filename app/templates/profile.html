@@ -10,11 +10,11 @@
 		{{ form.lastname.label(class="label") }}
 		{{ form.lastname(size=35) }}
 		{{ form.gender.label(class="label") }}
-		{{ form.gender(class="sfield", placeholder="Select Gender") }}
+		{{ form.gender(placeholder="Select Gender") }}
 		{{ form.email.label(class="label") }}
-		{{ form.email(size=35) }}
+		{{ form.email(size=35, placeholder="e.g. jdoe@example.com") }}
 		{{ form.location.label(class="label") }}
-		{{ form.location(size=35) }}
+		{{ form.location(size=35, placeholder="e.g. Kingston, Jamaica") }}
 		{{ form.biography.label(class="label") }}
 		{{ form.biography(cols="35", rows="5", class="field") }}
 		{{ form.hidden_tag() }}

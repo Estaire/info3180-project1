@@ -1,5 +1,5 @@
 *{
-    font-family: Arial;
+    font-family: sans-serif ;
 }
 
 body {
@@ -28,7 +28,7 @@ h1{
 input[type="text"], textarea{
     border: 1px solid lightgrey;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 0px 5px 10px;
 }
 
 input[type=file] {
@@ -37,6 +37,7 @@ input[type=file] {
 }
 
 .browse{
+    cursor: pointer;
     font-size: 12px;
     font-weight: bold;
     border: 1px solid lightgrey;
@@ -46,6 +47,7 @@ input[type=file] {
 }
 
 .form button{
+    cursor: pointer;
     background-color: rgb(126,211,33);
     border: 1px solid rgb(126,211,33);
     border-radius: 5px;
@@ -78,8 +80,8 @@ input[type=file] {
 
 .profile img{
     grid-area: img;
-    width: 8rem;
-    height: 10rem
+    width: 10rem;
+    height: 11rem
 }
 
 .name{
@@ -109,15 +111,104 @@ input[type=file] {
     border: 1px solid rgb(126,211,33);
     border-radius: 5px;
     color: white;
+    font-size: 18px;
     grid-area: button;
-    height: 2rem;
+    height: 40px;
     justify-self: center;
     align-self: center;
     text-align: center;
     text-decoration: none;
-    width: 9rem;
-    padding: 3px 0px;
+    width: 10rem;
+    padding: 5px;
 }
+
+.specificProfile{
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    border-top: 4px solid rgb(74,144,226);
+    box-shadow: 0px 0px 10px lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "img name"
+        "img email"
+        "img location"
+        "img created"
+        "label ."
+        "bio bio"
+        "send follow";
+    margin-left: 6rem;
+    width: 35rem;
+    padding: 45px 45px 10px 45px;
+}
+
+.specificProfile img{
+    grid-area: img;
+    width: 9rem;
+    height: 10rem
+}
+
+.specificProfile .name{
+    grid-area: name;
+}
+
+.specificProfile .email{
+    color: rgb(189,189,189);
+    grid-area: email;
+    margin-top: -10px;
+}
+
+.specificProfile .created{
+    color: rgb(189,189,189);
+    grid-area: created;
+    margin-top: -25px;
+
+}
+
+.specificProfile .aboutLabel{
+    color: gray; 
+    font-weight: bold;
+    grid-area: label;
+}
+
+.specificProfile .send{
+    grid-area: send;
+    background-color: rgb(126,211,33);
+    border: 1px solid rgb(126,211,33);
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 12rem; 
+}
+
+.specificProfile .follow{
+    grid-area: follow;
+    background-color: rgb(74,144,226);
+    border: 1px solid rgb(74,144,226);
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    margin-left: 20px; 
+    margin-top: 1rem;
+    width: 12rem; 
+}
+
+.specificProfile .bio{
+    color: gray;
+    grid-area: bio; 
+}
+
+.specificProfile .location{
+    grid-area: location;
+    font-weight: normal;
+    margin-top: -20px;
+}
+
+
 
 
 
